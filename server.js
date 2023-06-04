@@ -23,7 +23,7 @@ var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
   originWhitelist: originWhitelist,
-  requireHeader: ['origin', 'x-requested-with'],
+  requireHeader: ['origin', 'x-requested-with', 'Date', 'Content-Type', 'Transfer-Encoding', 'Connection', 'X-Powered-By', 'X-Ratelimit-Limit', 'X-Ratelimit-Remaining, X-Ratelimit-Reset', 'Vary', 'Access-Control-Allow-Credentials', 'Cache-Control', 'Pragma', 'Expires', 'X-Content-Type-Options', 'Etag', 'Via', 'CF-Cache-Status', 'Age', 'Report-To', 'NEL', 'Server', 'CF-RAY', 'Content-Encoding'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
